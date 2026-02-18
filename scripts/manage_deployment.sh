@@ -605,7 +605,7 @@ openclaw_ssh_keys: []
 # ─────────────────────────────────────────────────────────────────────
 # ADVANCED SETTINGS (usually don't need to change)
 # ─────────────────────────────────────────────────────────────────────
-# Node.js version (must be 20.x or higher)
+# Node.js version (must be 22.x or higher)
 # nodejs_version: "22.x"
 
 # OpenClaw port (change if 3000 conflicts with other services)

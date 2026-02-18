@@ -42,10 +42,9 @@
     name: nodejs
     state: present
 
-- name: Install pnpm globally
-  ansible.builtin.command: npm install -g pnpm
-  args:
-    creates: /usr/local/bin/pnpm
+- name: Enable corepack for pnpm
+  ansible.builtin.command: corepack enable
+  changed_when: true
 
 - name: Verify Node.js installation
   ansible.builtin.command: node --version
