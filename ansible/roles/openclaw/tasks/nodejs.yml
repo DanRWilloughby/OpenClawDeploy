@@ -45,6 +45,14 @@
 - name: Enable corepack for pnpm
   ansible.builtin.command: corepack enable
   changed_when: true
+  environment:
+    COREPACK_ENABLE_DOWNLOAD_PROMPT: '0'
+
+- name: Pre-download pnpm via corepack
+  ansible.builtin.command: corepack prepare pnpm@latest --activate
+  changed_when: true
+  environment:
+    COREPACK_ENABLE_DOWNLOAD_PROMPT: '0'
 
 - name: Verify Node.js installation
   ansible.builtin.command: node --version
@@ -55,6 +63,8 @@
   ansible.builtin.command: pnpm --version
   register: pnpm_version
   changed_when: false
+  environment:
+    COREPACK_ENABLE_DOWNLOAD_PROMPT: '0'
 
 - name: Display Node.js and pnpm versions
   ansible.builtin.debug:

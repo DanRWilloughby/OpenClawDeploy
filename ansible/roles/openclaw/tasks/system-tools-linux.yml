@@ -34,6 +34,7 @@
       - sysstat
       - procps
       # System utilities
+      - acl
       - tmux
       - tree
       - jq

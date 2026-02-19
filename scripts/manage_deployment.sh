@@ -14,7 +14,7 @@ ZONE="${GCP_ZONE:-us-central1-a}"
 MACHINE_TYPE="${GCP_MACHINE_TYPE:-t2a-standard-2}"
 DISK_SIZE="${GCP_DISK_SIZE:-50GB}"
 DISK_TYPE="${GCP_DISK_TYPE:-pd-ssd}"
-IMAGE_FAMILY="ubuntu-2204-lts"
+IMAGE_FAMILY="ubuntu-2204-lts-arm64"
 IMAGE_PROJECT="ubuntu-os-cloud"
 
 # Network & Security Configuration

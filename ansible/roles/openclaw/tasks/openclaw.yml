@@ -45,6 +45,8 @@
   become: true
   become_user: "{{ openclaw_user }}"
   changed_when: true  # Always consider changed as pnpm config may update
+  environment:
+    COREPACK_ENABLE_DOWNLOAD_PROMPT: '0'
 
 - name: Display installation mode
   ansible.builtin.debug:

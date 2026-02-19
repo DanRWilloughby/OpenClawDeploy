@@ -11,6 +11,7 @@
     PNPM_HOME: "{{ openclaw_home }}/.local/share/pnpm"
     PATH: "{{ openclaw_home }}/.local/bin:/home/linuxbrew/.linuxbrew/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
     HOME: "{{ openclaw_home }}"
+    COREPACK_ENABLE_DOWNLOAD_PROMPT: '0'
   register: openclaw_install
   changed_when: "'Already up to date' not in openclaw_install.stdout"
 
